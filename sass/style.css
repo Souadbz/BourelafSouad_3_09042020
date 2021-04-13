@@ -1,0 +1,124 @@
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 0 15px 0;
+}
+.header__logo {
+  width: 160px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #eaeaea;
+  font-size: 16px;
+}
+.localisation__icon {
+  margin-right: 19px;
+  margin-top: 1rem;
+}
+.localisation__text {
+  margin-right: 18px;
+  font-weight: 400;
+}
+
+.exploration {
+  padding: 20px 40px 60px 40px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.exploration__title {
+  width: 260px;
+  margin: 0;
+  margin-left: 10px;
+}
+.exploration h2 {
+  font-size: 23px;
+}
+.exploration__subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.exploration__button {
+  border-radius: 25px;
+  padding: 15px 22px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.operation {
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.operation h2 {
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 23px;
+  font-weight: 600;
+}
+.operation li {
+  display: flex;
+  margin: 0 0 25px -35px;
+}
+.operation__number-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.operation .number {
+  height: 18px;
+  background-color: #9356dc;
+  color: white;
+  padding: 4px 9px;
+  border-radius: 18px;
+}
+.operation__guide {
+  z-index: -1;
+  margin-left: -10px;
+  padding: 25px 35px;
+  background-color: #f6f6f6;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.operation i {
+  margin-right: 50px;
+  color: #7e7e7e;
+}
+.operation__icon {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+.operation span {
+  margin-left: -20px;
+}
+
+/*# sourceMappingURL=style.css.map */
