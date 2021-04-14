@@ -1,10 +1,10 @@
 body {
   width: 100%;
   height: 100%;
-  text-align: center;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 a {
@@ -17,14 +17,14 @@ ol {
 }
 
 header {
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .header {
-  position: relative;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px 0 15px 0;
+  position: relative;
 }
 .header__logo {
   width: 160px;
@@ -46,9 +46,12 @@ header {
   font-weight: 400;
 }
 
+main {
+  text-align: center;
+}
+
 .exploration {
   padding: 20px 40px 60px 40px;
-  text-align: center;
   background-color: #f6f6f6;
 }
 .exploration__title {
@@ -60,65 +63,153 @@ header {
   font-size: 23px;
 }
 .exploration__subtitle {
+  margin-bottom: 40px;
   font-size: 17px;
   font-weight: 300;
-  margin-bottom: 40px;
 }
 .exploration__button {
   border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px 22px;
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: #fff;
   cursor: pointer;
 }
 
-.operation {
-  padding: 0 20px;
+.fonctionnement {
   margin-top: 50px;
+  padding-top: 0px;
+  padding-left: 20px;
 }
-.operation h2 {
+.fonctionnement h2 {
   margin-bottom: 25px;
   text-align: left;
   font-size: 23px;
   font-weight: 600;
 }
-.operation li {
+.fonctionnement li {
+  width: 100%;
+  margin-bottom: 25px;
+  margin-left: -45px;
   display: flex;
-  margin: 0 0 25px -35px;
 }
-.operation__number-list {
+.fonctionnement__number-list {
+  margin: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-.operation .number {
-  height: 18px;
+.fonctionnement .number {
+  height: 20px;
+  border-radius: 20px;
+  padding: 3px 8px;
   background-color: #9356dc;
   color: white;
-  padding: 4px 9px;
-  border-radius: 18px;
 }
-.operation__guide {
-  z-index: -1;
-  margin-left: -10px;
-  padding: 25px 35px;
-  background-color: #f6f6f6;
+.fonctionnement__guide {
   width: 100%;
+  margin-left: -10px;
+  margin-right: -20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+  padding: 25px 36px;
+  z-index: -1;
+  background-color: #f6f6f6;
 }
-.operation i {
-  margin-right: 50px;
+.fonctionnement i {
+  margin-right: 35px;
   color: #7e7e7e;
 }
-.operation__icon {
-  font-size: 1.33333em;
-  line-height: 0.75em;
+.fonctionnement__icon {
+  font-size: 1.4em;
   vertical-align: -0.0667em;
 }
-.operation span {
-  margin-left: -20px;
+.fonctionnement #different-color {
+  color: #9356dc;
+}
+.fonctionnement span {
+  font-weight: bold;
+}
+
+.home {
+  background-color: #f6f6f6;
+  padding: 50px 20px 20px 20px;
+}
+.home h2 {
+  text-align: left;
+}
+
+.menus {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.menu {
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+}
+.menu__image {
+  height: 170px;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+.menu__new {
+  padding: 7px 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+  background-color: #99e2d0;
+  color: #008766;
+}
+.menu__low {
+  padding: 0.8rem;
+  display: flex;
+  position: relative;
+}
+.menu__box {
+  flex: 1;
+  margin: 0;
+  margin-left: -120px;
+}
+.menu__title {
+  margin: 0 0 0.25rem 0;
+}
+.menu__subtitle {
+  margin: 0;
+}
+.menu__button {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__heart {
+  background-color: white;
+}
+
+footer {
+  padding: 26px 24px 37px 24px;
+  background-color: #353535;
+  color: white;
+  text-align: left;
+  margin-top: 20px;
+}
+footer h3 {
+  margin: 0 0 8px 0;
+  font-size: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */

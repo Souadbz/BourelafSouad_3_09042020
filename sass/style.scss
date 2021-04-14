@@ -4,10 +4,10 @@
 body {
   width: 100%;
   height: 100%;
-  text-align: center;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -17,13 +17,14 @@ ol {
   list-style: none;
 }
 header {
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
+ 
 }
 .header {
-  position: relative;
-  box-shadow: 0px 4px 6px rgb(0 0 0 / 10%);
+  box-shadow: $shadow;
   padding: 15px 0 15px 0;
+  position: relative;
 
   &__logo {
     width: 160px;
@@ -45,9 +46,11 @@ header {
     font-weight: 400;
   }
 }
+main{
+  text-align: center;
+}
 .exploration {
   padding: 20px 40px 60px 40px;
-  text-align: center;
   background-color: #f6f6f6;
 
   &__title {
@@ -60,64 +63,149 @@ header {
   }
 
   &__subtitle {
-    font-size: 17px;
-    font-weight: 300;
     margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: 300;  
   }
   &__button {
     @include btn(exploration);
   }
 }
-.operation {
-  padding: 0 20px;
+.fonctionnement {
   margin-top: 50px;
-
+  padding-top: 0px;
+  padding-left: 20px;
+ 
   h2 {
-      margin-bottom: 25px;
+     margin-bottom: 25px;
      text-align: left;
      font-size: 23px;
      font-weight: 600;
   }
-  li {
-    display: flex;
-    margin: 0 0 25px -35px;
   
+  li {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: -45px;
+    display: flex; 
   }
   &__number-list {
+    margin: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
-
+    justify-content: space-evenly;
   }
     .number {
-        height: 18px;
+        height: 20px;
+        border-radius: 20px;
+        padding: 3px 8px;
         background-color: $color-primary;
-        color: white;
-        padding: 4px 9px;
-        border-radius: 18px;
+        color: white;    
     }
     &__guide{
-        z-index: -1 ;  
-        margin-left: -10px;
-        padding: 25px 35px;
-        background-color: #f6f6f6;
         width: 100%;
-        box-shadow: 0px 4px 6px rgb(0 0 0 / 10%);
+        margin-left: -10px;
+        margin-right: -20px;
+        box-shadow: $shadow;
         border-radius: 25px;
+        padding: 25px 36px;
+        z-index: -1 ;  
+        background-color: #f6f6f6;     
     }
     i{
-        margin-right: 50px;;
+        margin-right: 35px;
         color: #7e7e7e;
     }
 
     &__icon{
-        font-size: 1.33333em;
-    line-height: .75em;
-    vertical-align: -.0667em;
+        font-size: 1.4em;
+        vertical-align: -.0667em;
     }
     
+    #different-color{
+      color: $color-primary
+    }
     span{
-        margin-left: -20px;
+      font-weight: bold;
+    }
+}
+.home {
+  background-color: #f6f6f6;
+  padding: 50px 20px 20px 20px;
+
+  h2 {
+    text-align: left;
+  }
+}
+.menus{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.menu{
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+  &__image{
+    height: 170px;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+  }
+  &__new{
+    padding: 7px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+    background-color: $color-tertiary;
+    color:#008766; ; 
+  }
+  &__low{
+    padding: 0.80rem;
+    display: flex;
+    position: relative;
+  }
+  &__box{
+    flex: 1;
+    margin: 0;
+    margin-left: -120px;
+  }
+  &__title{
+    margin: 0 0 0.25rem 0;
+  }
+  &__subtitle {
+    margin: 0;
+  }
+  &__button{
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  &__heart {
+    background-color: white;
+  }
+}
+footer{
+    padding: 26px 24px 37px 24px;
+    background-color: #353535;
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+
+    h3{
+      margin: 0 0 8px 0;
+      font-size: 23px;
+      
     }
 }
