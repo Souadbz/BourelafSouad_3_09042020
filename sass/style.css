@@ -1,3 +1,160 @@
+.page--back {
+  position: relative;
+}
+.page__arrow {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 20px;
+  top: 52%;
+  font-size: 1.2rem;
+  color: black;
+}
+.page__logo {
+  width: 50%;
+  margin: 0.8rem 0 0.8rem 0;
+}
+
+.image__plate {
+  height: 17rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  margin-top: -64px;
+  box-sizing: border-box;
+  border-radius: 32px 32px;
+  position: relative;
+  z-index: 1;
+  background-color: #f6f6f6;
+}
+.card__main {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__title {
+  font-family: "Shrikhand", "cursive";
+}
+.card__button {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.card__button__heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #f6f6f6;
+}
+
+.proposals {
+  display: grid;
+}
+
+.proposal {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.proposal__title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 35px 0 5px;
+}
+.proposal hr {
+  width: 38px;
+  height: 4px;
+  margin: 0px 1px;
+  border-style: none;
+  background-color: #99e2d0;
+}
+
+.composition {
+  margin-top: 16px;
+  display: flex;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  cursor: pointer;
+}
+.composition__quality {
+  flex: 1;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.composition__title {
+  margin: 0 0px 5px;
+}
+.composition__detailed {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 13.5px;
+  font-weight: 300;
+}
+.composition__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 2rem;
+  font-weight: 500;
+}
+.composition__ok {
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  margin: -16px -80px -16px 16px;
+  transition-duration: 0.5s;
+}
+.composition__Icon {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: white;
+}
+.composition__icon {
+  color: #99e2d0;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.order__touch {
+  padding: 15px 40px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  cursor: pointer;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -68,9 +225,9 @@ main {
   font-weight: 300;
 }
 .exploration__button {
+  padding: 15px 22px;
   border-radius: 25px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px 22px;
   background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
   cursor: pointer;
@@ -178,38 +335,42 @@ main {
 .menu__box {
   flex: 1;
   margin: 0;
-  margin-left: -120px;
+  text-align: left;
 }
 .menu__title {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 8px 0;
 }
 .menu__subtitle {
   margin: 0;
+  margin-left: -1px;
+  opacity: 0.8;
 }
-.menu__button {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.menu__shape {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu__heart {
-  background-color: white;
-}
 
 footer {
   padding: 26px 24px 37px 24px;
+  text-align: left;
   background-color: #353535;
   color: white;
-  text-align: left;
-  margin-top: 20px;
 }
 footer h3 {
   margin: 0 0 8px 0;
+  font-family: "Shrikhand";
   font-size: 23px;
+}
+footer li {
+  margin-left: -40px;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: white;
+}
+footer i {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
