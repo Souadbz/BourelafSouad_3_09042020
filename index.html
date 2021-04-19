@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Adaptation à n'importe quel appareil et zoom pour les mobiles-->
-    <meta name="author" content="Souadbz" />
+    <meta name="author" content="Bourelaf-Souad" />
     <title>ohmyfood</title>
-    <meta name="description"content="Ohmyfood! est un site de commande de repas en ligne"/>
+    <meta name="description"content="Ohmyfood est un site de commande de repas en ligne"/>
+     <!-- Open Graph/Protocole développé par Facebook pour récupérer des informations sur votre page web-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://souadbz.github.io/BourelafSouad_3_09042020/"/>
+    <meta property="og:title" content="Ohmyfood">
+    <meta property="og:description" content="Ohmyfood est un site de commande de repas en ligne">
+    <meta property="og:image" content="https://github.com/Souadbz/BourelafSouad_3_09042020/blob/master/images/logo/ohmyfood.png">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!--Police Roboto-->
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> <!--Police Shrikand-->
@@ -33,7 +40,7 @@
             <div class="exploration__subtitle">
               <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             </div>
-            <a class="exploration__button" href="#">
+            <a class="exploration__button" href="#restaurants">
               Explorer nos restaurants
             </a>
         </div>
@@ -62,7 +69,7 @@
         </ol>
       </div>
     </section>
-    <section class="home">
+    <section class="home" id="restaurants">
       <div class="container">
         <h2>Restaurants</h2>
        <div class="menus">
@@ -115,7 +122,7 @@
              <h3 class="menu__title">Le délice des sens</h3>
              <span class="menu__subtitle">Folie-Méricourt</span>
            </div>
-           <div class="menu__shape">
+           <div class="menu__button">
              <i class="menu__heart far fa-heart"></i>
            </div>
           </div>
@@ -125,12 +132,12 @@
   </section>
   <footer>
     <h3>ohmyfood</h3>
-    <ol>
+    <ul>
         <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-        <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+        <li><a href="#"><i class="fas fa-hands-helping" id="hand"></i> Devenir partenaire</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
-    </ol>
+    </ul>
 </footer>
   </body>
 </html>

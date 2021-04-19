@@ -1,4 +1,243 @@
 @import "reset.css";
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  padding: 16px 0 16px 0;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.header__logo {
+  width: 170px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #eaeaea;
+  font-size: 17px;
+}
+.localisation__icon {
+  margin-right: 18px;
+  margin-top: 15px;
+}
+.localisation__text {
+  margin: 12px 25px 12px 1px;
+}
+
+main {
+  text-align: center;
+}
+
+.exploration {
+  padding: 20px 40px 60px 40px;
+  background-color: #f6f6f6;
+}
+.exploration__title {
+  margin: 0 8.7px;
+  padding-right: 25px;
+}
+.exploration h2 {
+  font-size: 23.3px;
+}
+.exploration__subtitle {
+  margin-bottom: 40px;
+  font-size: 17.3px;
+  font-weight: 300;
+}
+.exploration__button {
+  padding: 16px 22px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da, #9356dc 100%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.fonctionnement {
+  margin: 50px 0 60px 0;
+  padding: 0px 20px;
+  text-align: center;
+}
+.fonctionnement h2 {
+  margin-bottom: 25px;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: left;
+}
+.fonctionnement li {
+  width: 100%;
+  margin-bottom: 25px;
+  margin-left: -40px;
+  display: flex;
+}
+.fonctionnement__number-list {
+  margin-right: 5px;
+  margin-top: 22px;
+  z-index: 2;
+}
+.fonctionnement .number {
+  display: flex;
+  flex-direction: column;
+  height: 28px;
+  width: 28px;
+  border-radius: 28px;
+  padding: 3px 8px;
+  background-color: #9356dc;
+  color: white;
+}
+.fonctionnement__guide {
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -20px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 25px 36px;
+  background-color: #f6f6f6;
+}
+.fonctionnement i {
+  margin-right: 35px;
+  color: #7e7e7e;
+}
+.fonctionnement__icon {
+  vertical-align: -2px;
+  font-size: 22px;
+}
+.fonctionnement #different-color {
+  color: #9356dc;
+}
+.fonctionnement span {
+  font-weight: bold;
+}
+
+.home {
+  padding: 50px 20px 20px 20px;
+  background-color: #f6f6f6;
+}
+.home h2 {
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.menus {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  column-gap: 32px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menus {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.menu {
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+}
+.menu__image {
+  height: 170px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+.menu__new {
+  padding: 7px 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 16px;
+  right: 0.75rem;
+  background-color: #99e2d0;
+  color: #008766;
+}
+.menu__low {
+  padding: 0.8rem;
+  display: flex;
+  position: relative;
+}
+.menu__box {
+  flex: 1;
+  margin: 0;
+  text-align: left;
+}
+.menu__title {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+.menu__subtitle {
+  margin: 0;
+  margin-left: -1px;
+  font-weight: 300;
+}
+.menu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__heart {
+  font-size: 26px;
+  opacity: 0.6;
+}
+
+footer {
+  padding: 26px 24px 37px 24px;
+  text-align: left;
+  background-color: #353535;
+  color: white;
+}
+footer h3 {
+  margin: 0 0 8px 0;
+  font-family: "Shrikhand";
+  font-size: 20px;
+}
+footer li {
+  margin-left: -40px;
+  padding: 5px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+}
+footer i {
+  padding-right: 14px;
+}
+footer #hand {
+  margin-left: -6px;
+}
+
 .page--back {
   position: relative;
 }
@@ -88,9 +327,9 @@
 .composition {
   margin-top: 16px;
   display: flex;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 15px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #fff;
   cursor: pointer;
@@ -150,227 +389,10 @@
 .order__touch {
   padding: 15px 40px;
   border-radius: 25px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da, #9356dc 100%);
   color: #fff;
   cursor: pointer;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-header {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.header {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px 0 15px 0;
-  position: relative;
-}
-.header__logo {
-  width: 160px;
-}
-
-.localisation {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  background-color: #eaeaea;
-  font-size: 16px;
-}
-.localisation__icon {
-  margin-right: 19px;
-  margin-top: 1rem;
-}
-.localisation__text {
-  margin-right: 18px;
-  font-weight: 400;
-}
-
-main {
-  text-align: center;
-}
-
-.exploration {
-  padding: 20px 40px 60px 40px;
-  background-color: #f6f6f6;
-}
-.exploration__title {
-  width: 260px;
-  margin: 0;
-  margin-left: 10px;
-}
-.exploration h2 {
-  font-size: 23px;
-}
-.exploration__subtitle {
-  margin-bottom: 40px;
-  font-size: 17px;
-  font-weight: 300;
-}
-.exploration__button {
-  padding: 15px 22px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  cursor: pointer;
-}
-
-.fonctionnement {
-  margin-top: 50px;
-  padding-top: 0px;
-  padding-left: 20px;
-}
-.fonctionnement h2 {
-  margin-bottom: 25px;
-  text-align: left;
-  font-size: 23px;
-  font-weight: 600;
-}
-.fonctionnement li {
-  width: 100%;
-  margin-bottom: 25px;
-  margin-left: -45px;
-  display: flex;
-}
-.fonctionnement__number-list {
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.fonctionnement .number {
-  height: 20px;
-  border-radius: 20px;
-  padding: 3px 8px;
-  background-color: #9356dc;
-  color: white;
-}
-.fonctionnement__guide {
-  width: 100%;
-  margin-left: -10px;
-  margin-right: -20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  padding: 25px 36px;
-  z-index: -1;
-  background-color: #f6f6f6;
-}
-.fonctionnement i {
-  margin-right: 35px;
-  color: #7e7e7e;
-}
-.fonctionnement__icon {
-  font-size: 1.4em;
-  vertical-align: -0.0667em;
-}
-.fonctionnement #different-color {
-  color: #9356dc;
-}
-.fonctionnement span {
-  font-weight: bold;
-}
-
-.home {
-  background-color: #f6f6f6;
-  padding: 50px 20px 20px 20px;
-}
-.home h2 {
-  text-align: left;
-}
-
-.menus {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 1.5rem;
-  column-gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.menu {
-  display: block;
-  border-radius: 16px;
-  position: relative;
-  text-decoration: none;
-  background-color: white;
-  color: #000;
-}
-.menu__image {
-  height: 170px;
-  width: 100%;
-  border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
-}
-.menu__new {
-  padding: 7px 10px;
-  border-radius: 3px;
-  position: absolute;
-  top: 1rem;
-  right: 0.75rem;
-  background-color: #99e2d0;
-  color: #008766;
-}
-.menu__low {
-  padding: 0.8rem;
-  display: flex;
-  position: relative;
-}
-.menu__box {
-  flex: 1;
-  margin: 0;
-  text-align: left;
-}
-.menu__title {
-  margin: 0 0 8px 0;
-}
-.menu__subtitle {
-  margin: 0;
-  margin-left: -1px;
-  opacity: 0.8;
-}
-.menu__shape {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer {
-  padding: 26px 24px 37px 24px;
-  text-align: left;
-  background-color: #353535;
-  color: white;
-}
-footer h3 {
-  margin: 0 0 8px 0;
-  font-family: "Shrikhand";
-  font-size: 23px;
-}
-footer li {
-  margin-left: -40px;
-  margin-bottom: 1rem;
-}
-footer a {
-  color: white;
-}
-footer i {
-  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
