@@ -1,244 +1,305 @@
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h2,
+h3 {
+  font-weight: normal;
+}
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: loader 1s 1.2s both; ;
+  z-index: 3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color: white;
+
+  &__circle {
+    width: 120px;
+    height: 120px;
+    border: 15px solid #f6f6f6;
+    border-top: 15px solid $color-primary;
+    border-bottom: 15px solid $color-secondary;
+    border-left: 15px solid $color-tertiary;
+    border-radius: 50%;
+    animation: spin 1s;
+  }
+    
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+} 
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+.header {
+  padding: $Padding 0 $Padding 0;
+  box-shadow: $shadow;
+  position: relative;
+
+  &__logo {
+    width: 170px;
+  }
+}
+.localisation {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #eaeaea;
+  font-size: 17px;
+
+  &__icon {
+    margin-right: 18px;
+    margin-top: 15px;
+  }
+  &__text {
+    margin: 12px 25px 12px 1px;
+  }
+}
+main {
+  text-align: center;
+}
+.exploration {
+  padding: 20px 40px 60px 40px;
+  background-color: #f6f6f6;
+
+  &__title {
+    margin: 0 8.7px;
+    padding-right: 25px;
+  }
+  h2 {
+    font-size: 23.3px;
+  }
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 17.3px;
+    font-weight: 300;
+  }
+  &__Button {
+    padding: $Padding 22px;
+    @include btn(exploration);
+    transition: 1s;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.8);
+      cursor: pointer;
+    }
+  }
+}
+.fonctionnement {
+  margin: 50px 0 60px 0;
+  padding: 0px 20px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 25px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: left;
+  }
+  li {
     width: 100%;
-    height: 100%;
+    margin-bottom: 25px;
+    margin-left: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__number-list {
+    margin-right: 5px;
+    margin-top: 22px;
+    z-index: 2;
+  }
+  .number {
+    height: 28px;
+    width: 28px;
+    margin-bottom: 25px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 8px;
+    background-color: $color-primary;
+    color: white;
+  }
+  &__guide {
+    max-width: 100%;
+    margin-left: -15px;
+    margin-right: -20px;
+    box-shadow: $shadow;
+    border-radius: 25px;
+    padding: 25px 36px;
+    background-color: #f6f6f6;
+  }
+
+  i {
+    margin-right: 35px;
+    color: #7e7e7e;
+  }
+
+  &__icon {
+    vertical-align: -2px;
+    font-size: 22px;
+  }
+
+  #different-color {
+    color: $color-primary;
+  }
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: -20px;
+  }
+}
+.home {
+  padding: 50px 20px 20px 20px;
+  background-color: #f6f6f6;
+
+  h2 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+}
+.menus {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  column-gap: 32px;
+  margin-bottom: 40px;
+
+  & a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menus {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 54px;
+    column-gap: 62px;
+  }
+}
+.menu {
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+
+  &__image {
+    height: 170px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+  }
+  &__new {
+    padding: 7px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 16px;
+    right: 0.75rem;
+    background-color: $color-tertiary;
+    color: #008766;
+  }
+  &__low {
+    padding: 0.8rem;
+    display: flex;
+    position: relative;
+  }
+  &__box {
+    flex: 1;
     margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+    text-align: left;
+  }
+  &__title {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-left: -1px;
+    font-weight: 300;
+  }
+  &__symbol {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient( $color-primary, $color-secondary);
+      background-clip: text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+    }
+  }
+
+}
+
+footer {
+  padding: 26px 24px 37px 24px;
+  text-align: left;
+  background-color: #353535;
+  color: white;
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-family: "Shrikhand";
+    font-size: 20px;
+  }
+  li {
+    margin-left: -40px;
+    padding: 5px;
   }
   a {
+    color: white;
     text-decoration: none;
-  }
-  ul,
-  ol {
-    list-style: none;
-  }
-  h2,h3 {
-      font-weight: normal;
-  }
-  header {
-    margin: 0 auto;
-    text-align: center;
-   
-  }
-  .header {
-    padding: $Padding 0 $Padding 0;
-    box-shadow: $shadow;
-    position: relative;
-  
-    &__logo {
-      width: 170px;
-    }
-  }
-  .localisation {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background-color: #eaeaea;
-    font-size: 17px;
-  
-    &__icon {
-      margin-right: 18px;
-      margin-top: 15px;
-    }
-    &__text {
-      margin: 12px 25px 12px 1px;     
-    } 
-  }
-  main{
-    text-align: center;
-  }
-  .exploration {
-    padding: 20px 40px 60px 40px;
-    background-color: #f6f6f6;
-  
-    &__title {
-      margin: 0 8.7px; 
-      padding-right: 25px; 
-     
-    }
-    h2 {
-      font-size: 23.3px;
-    }
-  
-    &__subtitle {
-      margin-bottom: 40px;
-      font-size: 17.3px;
-      font-weight: 300;  
-    }
-    &__button {
-      padding: $Padding 22px;
-      @include btn(exploration);
-    }
-   
-  }
-  .fonctionnement {
-    margin: 50px 0 60px 0;
-    padding: 0px 20px;
-    text-align: center;
-   
-    h2 {
-       margin-bottom: 25px;
-       font-size: 23px;
-       font-weight: 600;
-       text-align: left;
 
-    }
-    li {
-        width: 100%;
-        margin-bottom: 25px;
-        margin-left: -40px;
-        display: flex;
-      }
-    &__number-list {
-        margin-right: 5px;
-        margin-top: 22px; 
-        z-index: 2;
-
-      }
-        .number {
-            display: flex;
-            flex-direction: column;
-            height: 28px;
-            width: 28px;
-            border-radius: 28px;
-            padding: 3px 8px;
-            background-color: $color-primary;
-            color: white; 
-             
-            
-        }
-        &__guide{
-            width: 100%;
-            margin-left: -15px;
-            margin-right: -20px;
-            box-shadow: $shadow;
-            border-radius: 25px;
-            padding: 25px 36px;  
-            background-color: #f6f6f6;     
-        }
-    
-      i{
-          margin-right: 35px;
-          color: #7e7e7e;
-      }
-  
-      &__icon{
-          vertical-align: -2px;
-          font-size: 22px;
-    
-      }
-      
-      #different-color{
-        color: $color-primary
-      }
-      span{
-        font-weight: bold;
-      }
-  }
-  .home {
-    padding: 50px 20px 20px 20px;
-    background-color: #f6f6f6;
-  
-    h2 {
-      margin-bottom: 15px;
-      text-align: left;
-      font-weight: 600;
-    }
-  }
-  .menus{
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-    column-gap: 32px;
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: 1024px) {
-    .menus{ 
-    grid-template-columns: repeat(2,1fr);
-    }
-  }
-  .menu{
-    display: block;
-    border-radius: 16px;
-    position: relative;
-    text-decoration: none;
-    background-color: white;
-    color: #000;
-
-    &__image{
-      height: 170px;
-      width: 100%;
-      border-radius: 16px 16px 0 0;
-      object-fit: cover;
-    }
-    &__new{
-      padding: 7px 10px;
-      border-radius: 3px;
-      position: absolute;
-      top: 16px;
-      right: 0.75rem;
-      background-color: $color-tertiary;
-      color:#008766; ; 
-    }
-    &__low{
-      padding: 0.80rem;
-      display: flex;
-      position: relative;
-    }
-    &__box{
-      flex: 1;
-      margin: 0;
-      text-align: left;
-    }
-    &__title{
-      margin: 0 0 4px 0;
-      font-weight:600 ;
-    }
-    &__subtitle {
-      margin: 0;
-      margin-left:-1px;
-      font-weight: 300 ;
-    }
-    &__button{
-      
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    &__heart{
-      font-size: 26px;
-      opacity: 0.6;
-    }
-  }
-  
-  footer{
-      padding: 26px 24px 37px 24px;
-      text-align: left;
-      background-color: #353535;
+    &:hover {
       color: white;
-     
-      h3{
-        margin: 0 0 8px 0;
-        font-family: "Shrikhand";
-        font-size: 20px;  
-      }
-      li {
-        margin-left: -40px;
-        padding: 5px;
-      }
-      a {
-        color:white;
-        text-decoration: none;
-       
-       &:hover{
-        color:white; 
-       }
-     }  
-      i{
-          padding-right: 14px;
-      }
-      #hand{
-          margin-left: -6px;
-      }
+    }
   }
-  
+  i {
+    padding-right: 14px;
+  }
+  #hand {
+    margin-left: -6px;
+  }
+}

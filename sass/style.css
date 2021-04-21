@@ -16,10 +16,49 @@ ol {
   list-style: none;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: normal;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation: loader 1s 1.2s both;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.loader__circle {
+  width: 120px;
+  height: 120px;
+  border: 15px solid #f6f6f6;
+  border-top: 15px solid #9356dc;
+  border-bottom: 15px solid #ff79da;
+  border-left: 15px solid #99e2d0;
+  border-radius: 50%;
+  animation: spin 1s;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   margin: 0 auto;
   text-align: center;
@@ -27,7 +66,7 @@ header {
 
 .header {
   padding: 16px 0 16px 0;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 .header__logo {
@@ -64,17 +103,27 @@ main {
 .exploration h2 {
   font-size: 23.3px;
 }
+.exploration a:hover {
+  text-decoration: none;
+  color: white;
+}
 .exploration__subtitle {
   margin-bottom: 40px;
   font-size: 17.3px;
   font-weight: 300;
 }
-.exploration__button {
+.exploration__Button {
   padding: 16px 22px;
   border-radius: 25px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc 100%);
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da 0%, #9356dc 100%);
   color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.exploration__Button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 
@@ -94,6 +143,8 @@ main {
   margin-bottom: 25px;
   margin-left: -40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fonctionnement__number-list {
   margin-right: 5px;
@@ -101,20 +152,21 @@ main {
   z-index: 2;
 }
 .fonctionnement .number {
-  display: flex;
-  flex-direction: column;
   height: 28px;
   width: 28px;
+  margin-bottom: 25px;
   border-radius: 28px;
+  display: flex;
+  flex-direction: column;
   padding: 3px 8px;
   background-color: #9356dc;
   color: white;
 }
 .fonctionnement__guide {
-  width: 100%;
+  max-width: 100%;
   margin-left: -15px;
   margin-right: -20px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   padding: 25px 36px;
   background-color: #f6f6f6;
@@ -131,7 +183,9 @@ main {
   color: #9356dc;
 }
 .fonctionnement span {
+  font-size: 18px;
   font-weight: bold;
+  margin-left: -20px;
 }
 
 .home {
@@ -151,10 +205,16 @@ main {
   column-gap: 32px;
   margin-bottom: 40px;
 }
+.menus a {
+  text-decoration: none;
+  color: #000;
+}
 
 @media screen and (min-width: 1024px) {
   .menus {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 54px;
+    column-gap: 62px;
   }
 }
 .menu {
@@ -199,14 +259,18 @@ main {
   margin-left: -1px;
   font-weight: 300;
 }
-.menu__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.menu__symbol {
+  color: black;
+  cursor: pointer;
 }
-.menu__heart {
-  font-size: 26px;
-  opacity: 0.6;
+.menu__symbol:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 footer {
@@ -282,23 +346,24 @@ footer #hand {
   font-family: "Shrikhand", "cursive";
 }
 .card__button {
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: white;
   border: 0px solid transparent;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
 }
-.card__button__heart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  background-color: #f6f6f6;
+.card__symbol {
+  color: black;
+  cursor: pointer;
+}
+.card__symbol:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.card i {
+  font-size: 40px;
 }
 
 .proposals {
@@ -329,10 +394,13 @@ footer #hand {
   display: flex;
   padding: 16px;
   border-radius: 15px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #fff;
   cursor: pointer;
+  animation: appearance 0.4s;
+  animation: appearance 0.5s;
+  animation: appearance 0.6s;
 }
 .composition__quality {
   flex: 1;
@@ -361,26 +429,80 @@ footer #hand {
 }
 .composition__ok {
   width: 64px;
+  margin: -16px -80px -16px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-  margin: -16px -80px -16px 16px;
-  transition-duration: 0.5s;
+  transition: 0.4s 0.1s;
+}
+.composition:hover .composition__ok {
+  margin-right: -16px;
 }
 .composition__Icon {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
   background-color: white;
+  transition: transform 0.4s 0.1s;
+}
+.composition:hover .composition__Icon {
+  transform: rotate(360deg);
 }
 .composition__icon {
   color: #99e2d0;
 }
 
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    margin-bottom: 80px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+}
 .order {
   display: flex;
   justify-content: center;
@@ -389,9 +511,14 @@ footer #hand {
 .order__touch {
   padding: 15px 40px;
   border-radius: 25px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc 100%);
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da 0%, #9356dc 100%);
   color: #fff;
+  cursor: pointer;
+}
+.order__touch:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 
