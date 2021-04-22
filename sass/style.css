@@ -16,23 +16,22 @@ ol {
   list-style: none;
 }
 
-h2,
 h3 {
   font-weight: normal;
 }
 
 .loader {
-  position: fixed;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
-  animation: loader 1s 1.2s both;
-  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
   background-color: white;
+  animation: loader 1s 1.2s both;
 }
 .loader__circle {
   width: 120px;
@@ -102,6 +101,7 @@ main {
 }
 .exploration h2 {
   font-size: 23.3px;
+  font-weight: bold;
 }
 .exploration a:hover {
   text-decoration: none;
@@ -116,7 +116,7 @@ main {
   padding: 16px 22px;
   border-radius: 25px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da 0%, #9356dc 100%);
+  background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
   cursor: pointer;
   transition: 1s;
@@ -127,21 +127,30 @@ main {
   cursor: pointer;
 }
 
+@media screen and (max-width: 298px) {
+  .exploration__Button {
+    padding: 15px 15px;
+  }
+}
 .fonctionnement {
-  margin: 50px 0 60px 0;
+  margin-top: 50px;
   padding: 0px 20px;
   text-align: center;
 }
-.fonctionnement h2 {
+.fonctionnement__title {
   margin-bottom: 25px;
+  margin-right: 200px;
   font-size: 23px;
-  font-weight: 600;
-  text-align: left;
+  font-weight: bold;
+  text-align: center;
+}
+.fonctionnement ol {
+  margin: 0;
+  padding: 0;
 }
 .fonctionnement li {
-  width: 100%;
   margin-bottom: 25px;
-  margin-left: -40px;
+  margin-left: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,15 +165,16 @@ main {
   width: 28px;
   margin-bottom: 25px;
   border-radius: 28px;
+  padding: 3px 8px;
   display: flex;
   flex-direction: column;
-  padding: 3px 8px;
+  font-size: 16px;
   background-color: #9356dc;
   color: white;
 }
 .fonctionnement__guide {
   max-width: 100%;
-  margin-left: -15px;
+  margin-left: -43px;
   margin-right: -20px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
@@ -177,17 +187,32 @@ main {
 }
 .fonctionnement__icon {
   vertical-align: -2px;
-  font-size: 22px;
+  font-size: 21px;
 }
 .fonctionnement #different-color {
   color: #9356dc;
 }
 .fonctionnement span {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
-  margin-left: -20px;
+  margin-left: -11px;
+  margin-right: 24px;
 }
 
+@media screen and (min-width: 1024px) {
+  .fonctionnement__title {
+    text-align: left;
+    margin-left: 50px;
+  }
+  .fonctionnement ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  .fonctionnement li {
+    margin: 0 100px 50px 0px;
+    flex: 1;
+  }
+}
 .home {
   padding: 50px 20px 20px 20px;
   background-color: #f6f6f6;
@@ -217,6 +242,11 @@ main {
     column-gap: 62px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0 50px 0 50px;
+  }
+}
 .menu {
   display: block;
   border-radius: 16px;
@@ -232,16 +262,16 @@ main {
   object-fit: cover;
 }
 .menu__new {
-  padding: 7px 10px;
-  border-radius: 3px;
+  padding: 5px 8px;
   position: absolute;
   top: 16px;
-  right: 0.75rem;
+  right: 12px;
+  border-radius: 3px;
   background-color: #99e2d0;
   color: #008766;
 }
 .menu__low {
-  padding: 0.8rem;
+  padding: 13px;
   display: flex;
   position: relative;
 }
@@ -252,25 +282,32 @@ main {
 }
 .menu__title {
   margin: 0 0 4px 0;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: bold;
 }
 .menu__subtitle {
   margin: 0;
   margin-left: -1px;
-  font-weight: 300;
+  font-size: 16.8px;
+}
+.menu__button {
+  margin-top: 7px;
+  margin-right: 10px;
 }
 .menu__symbol {
-  color: black;
   cursor: pointer;
 }
 .menu__symbol:hover {
-  animation: fill 0.3s ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  animation: symbol 0.2s 1s ease-in-out;
+}
+.menu i {
+  font-size: 25px;
 }
 
 footer {
@@ -281,7 +318,7 @@ footer {
 }
 footer h3 {
   margin: 0 0 8px 0;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", "sans-serif";
   font-size: 20px;
 }
 footer li {
@@ -306,47 +343,63 @@ footer #hand {
   position: relative;
 }
 .page__arrow {
-  height: 32px;
-  width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 20px;
-  top: 52%;
-  font-size: 1.2rem;
+  left: 22px;
+  top: 35%;
+  font-size: 20px;
   color: black;
 }
 .page__logo {
-  width: 50%;
-  margin: 0.8rem 0 0.8rem 0;
+  width: 46.5%;
+  margin: 12.4px 0 12.4px 0;
 }
 
 .image__plate {
-  height: 17rem;
   width: 100%;
+  height: 290px;
   object-fit: cover;
 }
 
+@media screen and (min-width: 767px) {
+  .page__logo {
+    width: 30%;
+  }
+
+  .page__arrow {
+    position: absolute;
+    left: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-menu {
+    margin: 0 50px 0 50px;
+  }
+}
 .card {
   margin-top: -64px;
   box-sizing: border-box;
-  border-radius: 32px 32px;
+  border-radius: 45px 45px;
   position: relative;
   z-index: 1;
   background-color: #f6f6f6;
 }
 .card__main {
-  padding: 1rem 2rem 0 1rem;
+  padding: 25px 32px 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .card__title {
+  margin-left: 5px;
   font-family: "Shrikhand", "cursive";
+  font-size: 29px;
 }
 .card__button {
-  background: white;
+  margin-bottom: 8px;
+  background: #f6f6f6;
   border: 0px solid transparent;
 }
 .card__symbol {
@@ -354,16 +407,16 @@ footer #hand {
   cursor: pointer;
 }
 .card__symbol:hover {
-  animation: fill 0.3s ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  animation: symbol 0.2s 1s ease-in-out;
 }
-.card i {
-  font-size: 40px;
+.card .fa-2x {
+  font-size: 25px;
 }
 
 .proposals {
@@ -372,25 +425,27 @@ footer #hand {
 
 .proposal {
   max-width: 100%;
+  margin: 16ps;
+  padding: 0 16px;
   overflow: hidden;
-  padding: 0 1rem;
 }
 .proposal__title {
   text-align: left;
   font-size: 20px;
-  font-weight: 500;
-  margin: 35px 0 5px;
+  font-weight: 300;
+  margin: 25px 0 5px 5px;
 }
 .proposal hr {
-  width: 38px;
+  width: 45px;
   height: 4px;
-  margin: 0px 1px;
+  margin: 0px 6px 15px;
   border-style: none;
   background-color: #99e2d0;
+  opacity: 1;
 }
 
 .composition {
-  margin-top: 16px;
+  margin: 16px 0 16px 0;
   display: flex;
   padding: 16px;
   border-radius: 15px;
@@ -411,20 +466,21 @@ footer #hand {
 }
 .composition__title {
   margin: 0 0px 5px;
+  font-size: 19px;
 }
 .composition__detailed {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 300;
 }
 .composition__price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 2rem;
+  padding-left: 20px;
   font-weight: 500;
 }
 .composition__ok {
@@ -438,10 +494,11 @@ footer #hand {
 }
 .composition:hover .composition__ok {
   margin-right: -16px;
+  cursor: pointer;
 }
 .composition__Icon {
-  height: 24px;
-  width: 24px;
+  height: 25px;
+  width: 25px;
   opacity: 1;
   display: flex;
   align-items: center;
@@ -455,6 +512,7 @@ footer #hand {
 }
 .composition__icon {
   color: #99e2d0;
+  font-size: 15px;
 }
 
 .delay-0 {
@@ -512,7 +570,7 @@ footer #hand {
   padding: 15px 40px;
   border-radius: 25px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da 0%, #9356dc 100%);
+  background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 @mixin btn($btn-exploration) {
     border-radius: 25px;
     box-shadow: $shadow;
-    background: linear-gradient($color-secondary 0%, $color-primary 100%);
+    background: linear-gradient($color-secondary, $color-primary);
     color: #fff;
     cursor: pointer; 
 }

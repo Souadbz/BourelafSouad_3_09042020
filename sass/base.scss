@@ -12,22 +12,21 @@ ul,
 ol {
   list-style: none;
 }
-h2,
 h3 {
   font-weight: normal;
 }
 .loader {
-  position: fixed;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
-  animation: loader 1s 1.2s both; ;
-  z-index: 3;
   display:flex;
   align-items:center;
   justify-content:center;
+  position: fixed;
+  left: 0;
+  top: 0; 
+  z-index: 3;
   background-color: white;
+  animation: loader 1s 1.2s both;
 
   &__circle {
     width: 120px;
@@ -63,7 +62,7 @@ header {
   text-align: center;
 }
 .header {
-  padding: $Padding 0 $Padding 0;
+  padding: 16px 0 16px 0;
   box-shadow: $shadow;
   position: relative;
 
@@ -91,7 +90,7 @@ main {
 }
 .exploration {
   padding: 20px 40px 60px 40px;
-  background-color: #f6f6f6;
+  background-color: $Background ;
 
   &__title {
     margin: 0 8.7px;
@@ -99,6 +98,7 @@ main {
   }
   h2 {
     font-size: 23.3px;
+    font-weight: bold;
   }
   a:hover {
     text-decoration: none;
@@ -111,7 +111,7 @@ main {
     font-weight: 300;
   }
   &__Button {
-    padding: $Padding 22px;
+    padding: 16px 22px;
     @include btn(exploration);
     transition: 1s;
 
@@ -122,21 +122,31 @@ main {
     }
   }
 }
+@media screen and(max-width: 298px){
+  .exploration__Button{
+    padding: 15px 15px;
+    
+  }
+}
 .fonctionnement {
-  margin: 50px 0 60px 0;
+  margin-top: 50px;
   padding: 0px 20px;
   text-align: center;
 
-  h2 {
+  &__title {
     margin-bottom: 25px;
+    margin-right: 200px;
     font-size: 23px;
-    font-weight: 600;
-    text-align: left;
+    font-weight: bold;
+    text-align: center;
+  }
+  ol{
+    margin: 0;
+    padding: 0;
   }
   li {
-    width: 100%;
     margin-bottom: 25px;
-    margin-left: -40px;
+    margin-left: -10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,20 +161,21 @@ main {
     width: 28px;
     margin-bottom: 25px;
     border-radius: 28px;
+    padding: 3px 8px;
     display: flex;
     flex-direction: column;
-    padding: 3px 8px;
+   font-size: 16px;
     background-color: $color-primary;
     color: white;
   }
   &__guide {
     max-width: 100%;
-    margin-left: -15px;
+    margin-left: -43px;
     margin-right: -20px;
     box-shadow: $shadow;
     border-radius: 25px;
     padding: 25px 36px;
-    background-color: #f6f6f6;
+    background-color: $Background;
   }
 
   i {
@@ -174,21 +185,41 @@ main {
 
   &__icon {
     vertical-align: -2px;
-    font-size: 22px;
+    font-size: 21px;
   }
 
   #different-color {
     color: $color-primary;
   }
   span {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
-    margin-left: -20px;
+    margin-left: -11px;
+    margin-right: 24px;
+  }
+}
+@media  screen and (min-width: 1024px) {
+  .fonctionnement {
+    &__title{
+      text-align: left;
+      margin-left: 50px;
+    }
+
+    ol{
+     display: flex;
+     justify-content: space-between;
+    }
+    li{
+      
+      margin: 0 100px 50px 0px ;
+     flex: 1;
+    
+    }
   }
 }
 .home {
   padding: 50px 20px 20px 20px;
-  background-color: #f6f6f6;
+  background-color: $Background;
 
   h2 {
     margin-bottom: 15px;
@@ -196,6 +227,7 @@ main {
     font-weight: 600;
   }
 }
+
 .menus {
   display: grid;
   grid-template-columns: 1fr;
@@ -215,6 +247,11 @@ main {
     column-gap: 62px;
   }
 }
+@media screen and (min-width: 1200px){
+  .container {
+    margin: 0 50px 0 50px;
+  }
+}
 .menu {
   display: block;
   border-radius: 16px;
@@ -230,16 +267,16 @@ main {
     object-fit: cover;
   }
   &__new {
-    padding: 7px 10px;
-    border-radius: 3px;
+    padding: 5px 8px;
     position: absolute;
     top: 16px;
-    right: 0.75rem;
+    right: 12px;
+    border-radius: 3px;
     background-color: $color-tertiary;
     color: #008766;
   }
   &__low {
-    padding: 0.8rem;
+    padding: 13px;
     display: flex;
     position: relative;
   }
@@ -250,27 +287,35 @@ main {
   }
   &__title {
     margin: 0 0 4px 0;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
   }
   &__subtitle {
     margin: 0;
     margin-left: -1px;
-    font-weight: 300;
+    font-size: 16.8px;
+   
+  }
+  &__button{
+    margin-top: 7px;
+    margin-right: 10px;
   }
   &__symbol {
-    color: black;
     cursor: pointer;
     &:hover {
-      animation: fill 0.3s ease-in-out;
       display: inline-block;
       opacity: 1;
       background:linear-gradient( $color-primary, $color-secondary);
       background-clip: text;
       -webkit-text-fill-color:transparent;
       font-weight: bold;
+      animation: symbol 0.2s 1s ease-in-out;
     }
   }
-
+  i{
+    font-size: 25px;
+  }
+   
 }
 
 footer {
@@ -281,7 +326,7 @@ footer {
 
   h3 {
     margin: 0 0 8px 0;
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", "sans-serif";
     font-size: 20px;
   }
   li {
