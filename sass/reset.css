@@ -102,7 +102,7 @@ time,
 mark,
 audio,
 video {
-  cursor: default;
+  cursor: inherit;
   -moz-tab-size: 4;
     -o-tab-size: 4;
        tab-size: 4;
@@ -284,7 +284,7 @@ a:hover {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 a:not([href]):not(class),
 a:not([href]):not([class]):hover {

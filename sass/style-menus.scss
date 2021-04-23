@@ -10,7 +10,7 @@
       left: 22px;
       top: 35%;
       font-size: 20px;
-      color: black;
+      color: $color-quinary;
     }
     &__logo{
       width: 46.5%;
@@ -47,7 +47,7 @@
     border-radius: 45px 45px;
     position: relative;
     z-index: 1;
-    background-color: $Background;
+    background-color: $color-back;
    
     &__main {
       padding: 25px 32px 0 16px;
@@ -62,11 +62,11 @@
     }
     &__button{
       margin-bottom: 8px;
-      background: $Background;
+      background: $color-back;
       border: 0px solid transparent;
     }
     &__symbol {
-      color: black;
+      color: $color-quinary;
       cursor: pointer;
       &:hover {
         display: inline-block;
@@ -80,8 +80,7 @@
     }
     .fa-2x{
     font-size: 25px;
-   }
-     
+   }     
 }
   
 .proposals {
@@ -114,9 +113,9 @@
     display: flex;
     padding: 16px;
     border-radius: 15px;
-    box-shadow: $shadow;
+    box-shadow: $shadow-btn;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $color-quaternary;
     cursor: pointer;
     animation: appearance 0.4s;
     animation: appearance 0.5s;
@@ -175,7 +174,7 @@
       align-items:center;
       justify-content: center;
       border-radius: 100px;
-      background-color: white;
+      background-color: $color-quaternary;
       transition: transform 0.4s 0.1s;
     }
     &:hover &__Icon{
@@ -211,6 +210,7 @@
    &__touch {
     padding: 15px 40px;
     @include btn(exploration);
+    transition: 1s;
   
    
    &:hover {

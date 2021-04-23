@@ -1,6 +1,6 @@
 @mixin btn($btn-exploration) {
     border-radius: 25px;
-    box-shadow: $shadow;
+    box-shadow: $shadow-btn;
     background: linear-gradient($color-secondary, $color-primary);
     color: #fff;
     cursor: pointer; 
