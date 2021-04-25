@@ -27,11 +27,9 @@ h3 {
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 0;
-  top: 0;
   z-index: 3;
   background-color: white;
-  animation: loader 1s 1.2s both;
+  animation: loader 1s 1s both;
 }
 .loader__circle {
   width: 120px;
@@ -123,23 +121,20 @@ header {
 }
 .card__button {
   margin-bottom: 8px;
-  background: #f6f6f6;
-  border: 0px solid transparent;
+  border: 0 solid transparent;
 }
 .card__symbol {
-  color: black;
   cursor: pointer;
+  animation: symbol 0.2s 1s ease-in-out;
 }
 .card__symbol:hover {
   display: inline-block;
-  opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  animation: symbol 0.2s 1s ease-in-out;
 }
-.card .fa-2x {
+.card .fa-heart {
   font-size: 25px;
 }
 
@@ -149,7 +144,7 @@ header {
 
 .proposal {
   max-width: 100%;
-  margin: 16ps;
+  margin: 16px;
   padding: 0 16px;
   overflow: hidden;
 }
@@ -177,9 +172,7 @@ header {
   overflow: hidden;
   background-color: white;
   cursor: pointer;
-  animation: appearance 0.4s;
-  animation: appearance 0.5s;
-  animation: appearance 0.6s;
+  animation: appearance 2s;
 }
 .composition__quality {
   flex: 1;
@@ -237,42 +230,6 @@ header {
 .composition__icon {
   color: #99e2d0;
   font-size: 15px;
-}
-
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
 }
 
 @keyframes appearance {
@@ -544,15 +501,14 @@ main {
 }
 .menu__symbol {
   cursor: pointer;
+  animation: symbol 0.2s 1s ease-in-out;
 }
 .menu__symbol:hover {
   display: inline-block;
-  opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  animation: symbol 0.2s 1s ease-in-out;
 }
 .menu i {
   font-size: 25px;

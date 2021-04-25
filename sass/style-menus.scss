@@ -62,23 +62,20 @@
     }
     &__button{
       margin-bottom: 8px;
-      background: $color-back;
-      border: 0px solid transparent;
+      border: 0 solid transparent;
     }
     &__symbol {
-      color: $color-quinary;
       cursor: pointer;
+      animation: symbol 0.2s 1s ease-in-out;
       &:hover {
         display: inline-block;
-        opacity: 1;
         background:linear-gradient( $color-primary, $color-secondary);
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color:transparent;
-        font-weight: bold;
-        animation: symbol 0.2s 1s ease-in-out;
+        font-weight: bold; 
       }
     }
-    .fa-2x{
+    .fa-heart{
     font-size: 25px;
    }     
 }
@@ -89,7 +86,7 @@
   
   .proposal {
     max-width: 100%;
-    margin: 16ps;
+    margin: 16px;
     padding: 0 16px;
     overflow: hidden;
   
@@ -117,9 +114,8 @@
     overflow: hidden;
     background-color: $color-quaternary;
     cursor: pointer;
-    animation: appearance 0.4s;
-    animation: appearance 0.5s;
-    animation: appearance 0.6s;
+    animation: appearance 2s;
+   
     
     &__quality {
       flex: 1;
@@ -185,19 +181,14 @@
       font-size: 15px;
     }
 }
-@for $i from 0 to 9 {
-  .delay-#{$i} {
-    animation-delay:  #{$i/10}s;
-  }
-}
 @keyframes appearance {
   0% {
-    opacity: 0;
+     opacity: 0;
     margin-bottom: 80px;
   }
   
   100% { 
-    opacity: 1;
+   opacity: 1;
     margin-bottom: 20px;
         
   }

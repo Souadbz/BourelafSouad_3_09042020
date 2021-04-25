@@ -247,14 +247,13 @@
     }
     &__symbol {
       cursor: pointer;
+      animation: symbol 0.2s 1s ease-in-out;
       &:hover {
         display: inline-block;
-        opacity: 1;
         background:linear-gradient( $color-primary, $color-secondary);
         -webkit-background-clip: text;
-        -webkit-text-fill-color:transparent;
+        -webkit-text-fill-color: transparent;
         font-weight: bold;
-        animation: symbol 0.2s 1s ease-in-out;
       }
     }
     i{
