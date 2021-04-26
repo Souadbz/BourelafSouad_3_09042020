@@ -62,17 +62,19 @@
     }
     &__button{
       margin-bottom: 8px;
-      border: 0 solid transparent;
+      border: 0 solid transparent; 
     }
-    &__symbol {
+    &__symbol { 
+      border: 0 solid transparent;
       cursor: pointer;
       animation: symbol 0.2s 1s ease-in-out;
       &:hover {
+        
         display: inline-block;
-        background:linear-gradient( $color-primary, $color-secondary);
+        background:linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
-        -webkit-text-fill-color:transparent;
-        font-weight: bold; 
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
       }
     }
     .fa-heart{

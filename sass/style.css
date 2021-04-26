@@ -124,6 +124,7 @@ header {
   border: 0 solid transparent;
 }
 .card__symbol {
+  border: 0 solid transparent;
   cursor: pointer;
   animation: symbol 0.2s 1s ease-in-out;
 }
@@ -498,6 +499,7 @@ main {
 .menu__button {
   margin-top: 7px;
   margin-right: 10px;
+  border: 0 solid transparent;
 }
 .menu__symbol {
   cursor: pointer;
