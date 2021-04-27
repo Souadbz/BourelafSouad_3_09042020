@@ -2,5 +2,6 @@
 @import "./utils/mixins";
 @import "reset.css";
 @import "base.scss";
-@import "style-menus.scss";
-@import "style-home.scss";
+@import "./pages/style-menus.scss";
+@import "./pages/style-home.scss";
+@import "./components/buttons";

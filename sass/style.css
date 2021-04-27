@@ -243,26 +243,6 @@ header {
     margin-bottom: 20px;
   }
 }
-.order {
-  display: flex;
-  justify-content: center;
-  padding: 40px 0px;
-}
-.order__touch {
-  padding: 15px 40px;
-  border-radius: 25px;
-  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  cursor: pointer;
-  transition: 1s;
-}
-.order__touch:hover {
-  opacity: 0.8;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
-
 .header {
   padding: 16px 0 16px 0;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
@@ -312,26 +292,7 @@ main {
   font-size: 17.3px;
   font-weight: 300;
 }
-.exploration__Button {
-  padding: 16px 22px;
-  border-radius: 25px;
-  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  cursor: pointer;
-  transition: 1s;
-}
-.exploration__Button:hover {
-  opacity: 0.8;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
 
-@media screen and (max-width: 298px) {
-  .exploration__Button {
-    padding: 10px 10px;
-  }
-}
 .fonctionnement {
   margin-top: 50px;
   padding: 0px 20px;
@@ -543,6 +504,46 @@ footer i {
 }
 footer #hand {
   margin-left: -6px;
+}
+
+.exploration__Button {
+  padding: 16px 22px;
+  border-radius: 25px;
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.exploration__Button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 298px) {
+  .exploration__Button {
+    padding: 10px 10px;
+  }
+}
+.order {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.order__touch {
+  padding: 15px 40px;
+  border-radius: 25px;
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.order__touch:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -47,23 +47,6 @@
       font-size: 17.3px;
       font-weight: 300;
     }
-    &__Button {
-      padding: 16px 22px;
-      @include btn(exploration);
-      transition: 1s;
-    
-      &:hover {
-        opacity: 0.8;
-        box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.8);
-        cursor: pointer;
-      }
-    }
-  }
-  @media screen and(max-width: 298px){
-    .exploration__Button{
-      padding: 10px 10px;
-      
-    }
   }
   .fonctionnement {
     margin-top: 50px;
