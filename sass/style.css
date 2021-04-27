@@ -512,7 +512,7 @@ footer #hand {
   border-radius: 25px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
+  color: white;
   cursor: pointer;
   transition: 1s;
 }
@@ -537,7 +537,7 @@ footer #hand {
   border-radius: 25px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
+  color: white;
   cursor: pointer;
   transition: 1s;
 }
