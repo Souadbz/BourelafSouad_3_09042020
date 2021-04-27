@@ -78,6 +78,15 @@ header {
   width: 46.5%;
   margin: 12.4px 0 12.4px 0;
 }
+@media screen and (min-width: 767px) {
+  .page__logo {
+    width: 30%;
+  }
+  .page__arrow {
+    position: absolute;
+    left: 100px;
+  }
+}
 
 .image__plate {
   width: 100%;
@@ -85,16 +94,6 @@ header {
   object-fit: cover;
 }
 
-@media screen and (min-width: 767px) {
-  .page__logo {
-    width: 30%;
-  }
-
-  .page__arrow {
-    position: absolute;
-    left: 100px;
-  }
-}
 @media screen and (min-width: 1024px) {
   .container-menu {
     margin: 0 50px 0 50px;
@@ -103,7 +102,7 @@ header {
 .card {
   margin-top: -64px;
   box-sizing: border-box;
-  border-radius: 45px 45px;
+  border-radius: 45px 45px 0 0;
   position: relative;
   z-index: 1;
   background-color: #f6f6f6;
@@ -131,6 +130,7 @@ header {
 .card__symbol:hover {
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -165,7 +165,7 @@ header {
 }
 
 .composition {
-  margin: 16px 0 16px 0;
+  margin: 20px 0;
   display: flex;
   padding: 16px;
   border-radius: 15px;
@@ -294,7 +294,7 @@ main {
 }
 
 .fonctionnement {
-  margin-top: 50px;
+  margin: 50px 0 70px;
   padding: 0px 20px;
 }
 .fonctionnement__title {
@@ -356,7 +356,6 @@ main {
   margin-left: -11px;
   margin-right: 24px;
 }
-
 @media screen and (max-width: 330px) {
   .fonctionnement span {
     font-size: 14px;
@@ -379,6 +378,7 @@ main {
     margin-left: 50px;
   }
 }
+
 .home {
   padding: 50px 20px 20px 20px;
   background-color: #f6f6f6;
@@ -400,7 +400,6 @@ main {
   text-decoration: none;
   color: black;
 }
-
 @media screen and (min-width: 1024px) {
   .menus {
     grid-template-columns: repeat(2, 1fr);
@@ -408,6 +407,7 @@ main {
     column-gap: 62px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .container {
     margin: 0 50px 0 50px;
@@ -469,6 +469,7 @@ main {
 .menu__symbol:hover {
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -484,7 +485,7 @@ footer {
   color: white;
 }
 footer h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
   font-family: "Shrikhand", "sans-serif";
   font-size: 20px;
 }
@@ -520,19 +521,19 @@ footer #hand {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
-
 @media screen and (max-width: 298px) {
   .exploration__Button {
     padding: 10px 10px;
   }
 }
+
 .order {
   display: flex;
   justify-content: center;
   padding: 40px 0px;
 }
 .order__touch {
-  padding: 15px 40px;
+  padding: 15px 50px;
   border-radius: 25px;
   box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(#ff79da, #9356dc);

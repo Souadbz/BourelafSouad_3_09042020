@@ -7,7 +7,7 @@
       width: 170px;
     }
   }
-  .localisation {
+.localisation {
     display: flex;
     justify-content: center;
     position: relative;
@@ -21,11 +21,11 @@
     &__text {
       margin: 12px 25px 12px 1px;
     }
-  }
-  main {
-    text-align: center;
-  }
-  .exploration {
+}
+main {
+     text-align: center;
+    }
+.exploration {
     padding: 20px 40px 60px 40px;
     background-color: $color-back;
   
@@ -47,9 +47,9 @@
       font-size: 17.3px;
       font-weight: 300;
     }
-  }
-  .fonctionnement {
-    margin-top: 50px;
+}
+.fonctionnement {
+    margin: 50px 0 70px;
     padding: 0px 20px;
   
     &__title {
@@ -114,37 +114,36 @@
       margin-left: -11px;
       margin-right: 24px;
     }
-  }
-  @media screen and(max-width: 330px){
-    .fonctionnement span{
-      font-size: 14px;
-      
+    @media screen and(max-width: 330px){
+      & span{
+        font-size: 14px;
+        
+      }
     }
-  }
-  @media screen and (min-width: 1024px) {
-    .fonctionnement {
-      &__title{
-        text-align: left;
-      }
-  
-      ol{
-       display: flex;
-       justify-content: space-evenly;
-      }
-      li{  
-        margin: 0 0 50px 16px;
+    @media screen and (min-width: 1024px) {
+      & {
+        &__title{
+          text-align: left;
+        }
+    
+        ol{
+         display: flex;
+         justify-content: space-evenly;
+        }
+        li{  
+          margin: 0 0 50px 16px;
+        }  
       }  
-    }  
-  
-  }
-  @media  screen and (min-width: 1200px) {
-    .fonctionnement {
-      &__title{
-        margin-left:50px
+    }
+    @media  screen and (min-width: 1200px) {
+      & {
+        &__title{
+          margin-left:50px
+        }
       }
     }
-  }
-  .home {
+}
+.home {
     padding: 50px 20px 20px 20px;
     background-color: $color-back;
   
@@ -153,9 +152,9 @@
       text-align: left;
       font-weight: 600;
     }
-  }
+}
   
-  .menus {
+.menus {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 24px;
@@ -166,20 +165,21 @@
       text-decoration: none;
       color: $color-quinary;
     }
-  }
-  @media screen and (min-width: 1024px) {
-    .menus {
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 54px;
-      column-gap: 62px;
+    @media screen and (min-width: 1024px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 54px;
+        column-gap: 62px;
+      }
     }
-  }
-  @media screen and (min-width: 1200px){
+}
+  
+@media screen and (min-width: 1200px){
     .container {
       margin: 0 50px 0 50px;
     }
-  }
-  .menu {
+}
+.menu {
     display: block;
     border-radius: 16px;
     position: relative;
@@ -236,6 +236,7 @@
       &:hover {
         display: inline-block;
         background:linear-gradient( $color-primary, $color-secondary);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
@@ -244,16 +245,16 @@
     i{
       font-size: 25px;
     }  
-  }
+}
   
-  footer {
+footer {
     padding: 26px 24px 37px 24px;
     text-align: left;
     background-color: $color-back-footer;
     color: $color-quaternary;
   
     h3 {
-      margin: 0 0 8px 0;
+      margin: 0 0 12px 0;
       font-family: "Shrikhand", "sans-serif";
       font-size: 20px;
     }
@@ -275,4 +276,4 @@
     #hand {
       margin-left: -6px;
     }
-  }  
+}  

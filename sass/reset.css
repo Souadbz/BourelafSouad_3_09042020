@@ -273,14 +273,10 @@ sub {
 sup {
   top: -0.5em;
 }
-a {
+a{
   cursor: pointer;
-  color: #3333e1;
-  background-color: transparent;
-  text-decoration: none;
 }
 a:hover {
-  color: #3434e0;
   text-decoration: underline;
 }
 a:focus {
@@ -289,7 +285,6 @@ a:focus {
 a:not([href]):not(class),
 a:not([href]):not([class]):hover {
   cursor: default;
-  color: inherit;
   text-decoration: none;
 }
 a,
@@ -403,10 +398,6 @@ label {
 button {
   border-radius: 0;
   text-transform: none;
-}
-button:focus {
-  outline: dotted 1px;
-  outline: -webkit-focus-ring-color auto 5px;
 }
 input,
 button {
