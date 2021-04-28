@@ -130,7 +130,6 @@ header {
 .card__symbol:hover {
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -469,7 +468,6 @@ main {
 .menu__symbol:hover {
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -523,7 +521,7 @@ footer #hand {
 }
 @media screen and (max-width: 298px) {
   .exploration__Button {
-    padding: 10px 10px;
+    padding: 10px;
   }
 }
 

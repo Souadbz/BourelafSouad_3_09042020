@@ -222,13 +222,11 @@ main {
       margin: 0;
       margin-left: -1px;
       font-size: 16.8px;
-     
     }
     &__button{
       margin-top: 7px;
       margin-right: 10px;
       border: 0 solid transparent;
-      
     }
     &__symbol {
       cursor: pointer;
@@ -236,7 +234,6 @@ main {
       &:hover {
         display: inline-block;
         background:linear-gradient( $color-primary, $color-secondary);
-        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
@@ -245,8 +242,7 @@ main {
     i{
       font-size: 25px;
     }  
-}
-  
+} 
 footer {
     padding: 26px 24px 37px 24px;
     text-align: left;
