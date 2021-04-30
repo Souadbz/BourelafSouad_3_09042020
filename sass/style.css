@@ -119,20 +119,29 @@ header {
   font-size: 29px;
 }
 .card__button {
-  margin-bottom: 8px;
   border: 0 solid transparent;
+  position: absolute;
+  top: 26px;
+  right: 30px;
 }
-.card__like {
+.card__like1 {
   border: 0 solid transparent;
   cursor: pointer;
+  position: relative;
 }
-.card__like:hover {
-  transition-duration: 2s;
-  display: inline-block;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+.card__like1:hover {
+  animation: empty 1s;
+}
+.card__like2 {
+  border: 0 solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  color: #f6f6f6;
+}
+.card__like2:hover {
+  animation: full 2s ease-in-out both;
 }
 .card .fa-heart {
   font-size: 26px;
@@ -457,26 +466,59 @@ main {
   font-size: 16.8px;
 }
 .menu__button {
-  margin-top: 7px;
-  margin-right: 10px;
   border: 0 solid transparent;
+  position: absolute;
+  top: 17px;
+  right: 20px;
 }
-.menu__like {
+.menu__like1 {
   border: 0 solid transparent;
   cursor: pointer;
+  position: relative;
 }
-.menu__like:hover {
-  transition-duration: 2s;
-  display: inline-block;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+.menu__like1:hover {
+  animation: empty 1s;
+}
+.menu__like2 {
+  border: 0 solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  color: white;
+}
+.menu__like2:hover {
+  animation: full 2s ease-in-out both;
 }
 .menu i {
-  font-size: 26px;
+  font-size: 27px;
 }
 
+@keyframes empty {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes full {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 footer {
   padding: 26px 24px 37px 24px;
   text-align: left;

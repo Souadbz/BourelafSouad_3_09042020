@@ -1,277 +1,308 @@
 .header {
-    padding: 16px 0 16px 0;
-    box-shadow: $shadow-btn;
-    position: relative;
-  
-    &__logo {
-      width: 170px;
-    }
+  padding: 16px 0 16px 0;
+  box-shadow: $shadow-btn;
+  position: relative;
+
+  &__logo {
+    width: 170px;
   }
+}
 .localisation {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background-color: $color-back-localisation;
-    font-size: 17px;
-  
-    &__icon {
-      margin-right: 18px;
-      margin-top: 15px;
-    }
-    &__text {
-      margin: 12px 25px 12px 1px;
-    }
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: $color-back-localisation;
+  font-size: 17px;
+
+  &__icon {
+    margin-right: 18px;
+    margin-top: 15px;
+  }
+  &__text {
+    margin: 12px 25px 12px 1px;
+  }
 }
 main {
-     text-align: center;
-    }
+  text-align: center;
+}
 .exploration {
-    padding: 20px 40px 60px 40px;
-    background-color: $color-back;
-  
-    &__title {
-      margin: 0 8.7px;
-      padding-right: 25px;
-    }
-    h2 {
-      font-size: 23.3px;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: none;
-      color: $color-quaternary;
-    }
-  
-    &__subtitle {
-      margin-bottom: 40px;
-      font-size: 17.3px;
-      font-weight: 300;
-    }
+  padding: 20px 40px 60px 40px;
+  background-color: $color-back;
+
+  &__title {
+    margin: 0 8.7px;
+    padding-right: 25px;
+  }
+  h2 {
+    font-size: 23.3px;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $color-quaternary;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 17.3px;
+    font-weight: 300;
+  }
 }
 .fonctionnement {
-    margin: 50px 0 70px;
-    padding: 0px 20px;
-  
-    &__title {
-      margin-bottom: 25px;
-      margin-right: 200px;
-      font-size: 23px;
-      font-weight: bold;
-      text-align: left;
+  margin: 50px 0 70px;
+  padding: 0px 20px;
+
+  &__title {
+    margin-bottom: 25px;
+    margin-right: 200px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: left;
+  }
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 25px;
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+  &__number-list {
+    margin-right: 8px;
+    margin-top: 22px;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+  }
+  .number {
+    height: 28px;
+    width: 28px;
+    margin-bottom: 25px;
+    border-radius: 28px;
+    padding: 3px 8px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    background-color: $color-primary;
+    color: $color-quaternary;
+  }
+  &__guide {
+    max-width: 100%;
+    box-shadow: $shadow-btn;
+    border-radius: 25px;
+    padding: 25px 36px;
+    background-color: $color-back;
+  }
+
+  i {
+    margin-right: 35px;
+    color: $color-icon;
+  }
+
+  &__icon {
+    vertical-align: -2px;
+    font-size: 21px;
+  }
+
+  #different-color {
+    color: $color-primary;
+  }
+  span {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: -11px;
+    margin-right: 24px;
+  }
+  @media screen and(max-width: 330px) {
+    & span {
+      font-size: 14px;
     }
-    ol{
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 25px;
-      margin-left: 10px;
-      white-space: nowrap;
-    }
-    &__number-list {
-      margin-right: 8px;
-      margin-top: 22px;
-      z-index: 2;
-      position: absolute;
-      text-align: center;
-    }
-    .number {
-      height: 28px;
-      width: 28px;
-      margin-bottom: 25px;
-      border-radius: 28px;
-      padding: 3px 8px;
-      display: flex;
-      flex-direction: column;
-     font-size: 16px;
-      background-color: $color-primary;
-      color: $color-quaternary;
-    }
-    &__guide {
-      max-width: 100%;
-      box-shadow: $shadow-btn;
-      border-radius: 25px;
-      padding: 25px 36px;
-      background-color: $color-back;
-    }
-  
-    i {
-      margin-right: 35px;
-      color: $color-icon;
-    }
-  
-    &__icon {
-      vertical-align: -2px;
-      font-size: 21px;
-    }
-  
-    #different-color {
-      color: $color-primary;
-    }
-    span {
-      font-size: 17px;
-      font-weight: bold;
-      margin-left: -11px;
-      margin-right: 24px;
-    }
-    @media screen and(max-width: 330px){
-      & span{
-        font-size: 14px;
-        
+  }
+  @media screen and (min-width: 1024px) {
+    & {
+      &__title {
+        text-align: left;
+      }
+
+      ol {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      li {
+        margin: 0 0 50px 16px;
       }
     }
-    @media screen and (min-width: 1024px) {
-      & {
-        &__title{
-          text-align: left;
-        }
-    
-        ol{
-         display: flex;
-         justify-content: space-evenly;
-        }
-        li{  
-          margin: 0 0 50px 16px;
-        }  
-      }  
-    }
-    @media  screen and (min-width: 1200px) {
-      & {
-        &__title{
-          margin-left:50px
-        }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      &__title {
+        margin-left: 50px;
       }
     }
+  }
 }
 .home {
-    padding: 50px 20px 20px 20px;
-    background-color: $color-back;
-  
-    h2 {
-      margin-bottom: 15px;
-      text-align: left;
-      font-weight: 600;
-    }
+  padding: 50px 20px 20px 20px;
+  background-color: $color-back;
+
+  h2 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
 }
-  
+
 .menus {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-    column-gap: 32px;
-    margin-bottom: 40px;
-  
-    & a {
-      text-decoration: none;
-      color: $color-quinary;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  column-gap: 32px;
+  margin-bottom: 40px;
+
+  & a {
+    text-decoration: none;
+    color: $color-quinary;
+  }
+  @media screen and (min-width: 1024px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 54px;
+      column-gap: 62px;
     }
-    @media screen and (min-width: 1024px) {
-      & {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 54px;
-        column-gap: 62px;
-      }
-    }
+  }
 }
-  
-@media screen and (min-width: 1200px){
-    .container {
-      margin: 0 50px 0 50px;
-    }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0 50px 0 50px;
+  }
 }
 .menu {
-    display: block;
-    border-radius: 16px;
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  background-color: $color-quaternary;
+  color: $color-quinary;
+
+  &__image {
+    height: 170px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+  }
+  &__new {
+    padding: 5px 8px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    border-radius: 3px;
+    background-color: $color-tertiary;
+    box-shadow: $shadow-btn;
+    color: $color-new;
+  }
+  &__low {
+    padding: 13px;
+    display: flex;
     position: relative;
-    text-decoration: none;
-    background-color: $color-quaternary;
-    color: $color-quinary;
-  
-    &__image {
-      height: 170px;
-      width: 100%;
-      border-radius: 16px 16px 0 0;
-      object-fit: cover;
-    }
-    &__new {
-      padding: 5px 8px;
-      position: absolute;
-      top: 16px;
-      right: 12px;
-      border-radius: 3px;
-      background-color: $color-tertiary;
-      box-shadow: $shadow-btn;
-      color: $color-new;
-    }
-    &__low {
-      padding: 13px;
-      display: flex;
-      position: relative;
-    }
-    &__box {
-      flex: 1;
-      margin: 0;
-      text-align: left;
-    }
-    &__title {
-      margin: 0 0 4px 0;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    &__subtitle {
-      margin: 0;
-      margin-left: -1px;
-      font-size: 16.8px;
-    }
-    &__button{
-      margin-top: 7px;
-      margin-right: 10px;
-      border: 0 solid transparent;
-      
-    }
-    &__like { 
-      border: 0 solid transparent;
-      cursor: pointer;
-      &:hover{
-        transition-duration: 2s;
-        display: inline-block;
-        background:linear-gradient($color-primary, $color-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-      }
-    }  
-    i{
-      font-size: 26px;
-    }  
-  } 
-footer {
-    padding: 26px 24px 37px 24px;
+  }
+  &__box {
+    flex: 1;
+    margin: 0;
     text-align: left;
-    background-color: $color-back-footer;
+  }
+  &__title {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-left: -1px;
+    font-size: 16.8px;
+  }
+  &__button {
+    border: 0 solid transparent;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+  }
+  &__like1 {
+    border: 0 solid transparent;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      animation: empty 1s;
+    }
+  }
+  &__like2 {
+    border: 0 solid transparent;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
     color: $color-quaternary;
-  
-    h3 {
-      margin: 0 0 12px 0;
-      font-family: "Shrikhand", "sans-serif";
-      font-size: 20px;
+    &:hover {
+      animation: full 2s ease-in-out both;
     }
-    li {
-      margin-left: -40px;
-      padding: 5px;
-    }
-    a {
+  }
+  i {
+    font-size: 27px;
+  }
+}
+@keyframes empty {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes full {
+  0% {
+      opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    background: linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient($color-primary, $color-secondary);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
+}                    
+footer {
+  padding: 26px 24px 37px 24px;
+  text-align: left;
+  background-color: $color-back-footer;
+  color: $color-quaternary;
+
+  h3 {
+    margin: 0 0 12px 0;
+    font-family: "Shrikhand", "sans-serif";
+    font-size: 20px;
+  }
+  li {
+    margin-left: -40px;
+    padding: 5px;
+  }
+  a {
+    color: $color-quaternary;
+    text-decoration: none;
+
+    &:hover {
       color: $color-quaternary;
-      text-decoration: none;
-  
-      &:hover {
-        color: $color-quaternary;
-      }
     }
-    i {
-      padding-right: 14px;
-    }
-    #hand {
-      margin-left: -6px;
-    }
-}  
+  }
+  i {
+    padding-right: 14px;
+  }
+  #hand {
+    margin-left: -6px;
+  }
+}
