@@ -227,22 +227,24 @@ main {
       margin-top: 7px;
       margin-right: 10px;
       border: 0 solid transparent;
+      
     }
-    &__symbol {
+    &__like { 
+      border: 0 solid transparent;
       cursor: pointer;
-      animation: symbol 0.2s 1s ease-in-out;
-      &:hover {
+      &:hover{
+        transition-duration: 2s;
         display: inline-block;
-        background:linear-gradient( $color-primary, $color-secondary);
+        background:linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
       }
-    }
-    i{
-      font-size: 25px;
     }  
-} 
+    i{
+      font-size: 26px;
+    }  
+  } 
 footer {
     padding: 26px 24px 37px 24px;
     text-align: left;

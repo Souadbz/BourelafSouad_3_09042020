@@ -122,12 +122,12 @@ header {
   margin-bottom: 8px;
   border: 0 solid transparent;
 }
-.card__symbol {
+.card__like {
   border: 0 solid transparent;
   cursor: pointer;
-  animation: symbol 0.2s 1s ease-in-out;
 }
-.card__symbol:hover {
+.card__like:hover {
+  transition-duration: 2s;
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -135,7 +135,7 @@ header {
   font-weight: bold;
 }
 .card .fa-heart {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .proposals {
@@ -461,11 +461,12 @@ main {
   margin-right: 10px;
   border: 0 solid transparent;
 }
-.menu__symbol {
+.menu__like {
+  border: 0 solid transparent;
   cursor: pointer;
-  animation: symbol 0.2s 1s ease-in-out;
 }
-.menu__symbol:hover {
+.menu__like:hover {
+  transition-duration: 2s;
   display: inline-block;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -473,7 +474,7 @@ main {
   font-weight: bold;
 }
 .menu i {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 footer {

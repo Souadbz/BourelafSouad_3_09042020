@@ -59,20 +59,20 @@
       margin-bottom: 8px;
       border: 0 solid transparent; 
     }
-    &__symbol { 
+    &__like { 
       border: 0 solid transparent;
       cursor: pointer;
-      animation: symbol 0.2s 1s ease-in-out;
-      &:hover {
+       &:hover{
+        transition-duration: 2s;
         display: inline-block;
         background:linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
       }
-    }
+    }  
     .fa-heart{
-      font-size: 25px;
+      font-size: 26px;
     }     
 } 
 .proposals {
@@ -140,7 +140,7 @@
       margin: -16px -80px -16px 16px;
       display:flex;
       justify-content: center;
-      align-items:center;
+      align-items: center;
       background-color: $color-tertiary;
       transition: 0.4s 0.1s;
     }
